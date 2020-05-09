@@ -1,0 +1,4 @@
+Gestosc 25%:
+	macierz: 0[ms]
+	lista: 4.16[ms]
+

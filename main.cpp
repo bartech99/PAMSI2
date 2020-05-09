@@ -61,11 +61,11 @@ int main()
 					Fill(V, E, m, l);
 
 					testM->Begin();
-					m->BF(false);
+					m->BF();
 					testM->End(i);
 
 					testL->Begin();
-					l->BF(false);
+					l->BF();
 					testL->End(i);
 
 					delete m;
@@ -91,6 +91,8 @@ int main()
 
 		int j = 0;
 		file2 = new File();
+		Test* test = new Test(1);
+		double tM, tL;
 
 		while (file->Open(j + 1, 'i'))
 		{
@@ -109,11 +111,16 @@ int main()
 					}
 				}
 
-				m->BF(true);
-				l->BF(true);
+				test->Begin();
+				m->BF();
+				tM = test->End();
+
+				test->Begin();
+				l->BF();
+				tL = test->End();
 
 				file2->Open(j, 'o');
-				file2->WriteGraphs(m, l);
+				file2->WriteGraphs(l->BFdataGetter(), tM, tL, V, E, V0);
 				file2->Close();
 
 				delete m;
@@ -123,6 +130,7 @@ int main()
 		}
 		cout << "Wczytano plikow: " << j << "." << endl;
 
+		delete test;
 		delete file;
 		delete file2;
 		break;

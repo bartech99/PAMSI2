@@ -15,6 +15,7 @@ public:
 
 	void Begin();
 	double End(int);
+	double End();
 
 	double Average();
 	double CalcAverage();

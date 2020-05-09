@@ -74,15 +74,44 @@ void List::Display()
 	PressAnyKey();
 }
 
-void List::BF(bool WritingOn)
+void List::BF()
 {
+	Graph* temp;
+	this->BFdata[this->V0 - 1] = 0;
 
+	for (int i = 0; i < this->V; i++)
+	{
+		for (int j = 0; j < this->V; j++)
+		{
+			temp = this->arr[j];
+			while (temp)
+			{
+				if (this->BFdata[j] + temp->w < this->BFdata[temp->v])
+					this->BFdata[temp->v] = this->BFdata[j] + temp->w;
+				temp = temp->next;
+			}
+		}
+	}
+
+	for (int j = 0; j < this->V; j++)
+	{
+		temp = this->arr[j];
+		while (temp)
+		{
+			if (this->BFdata[j] + temp->w < this->BFdata[temp->v])
+			{
+				cout << "Graf zawiera cykl ujemny!" << endl;
+				return;
+			}
+			temp = temp->next;
+		}
+	}
 }
 
 List::List(int v, int e, int v0)
 	:Basis(v, e, v0)
 {
-	this->arr = new Graph * [this->V];
+	this->arr = new Graph* [this->V];
 	for (int i = 0; i < this->V; i++)
 	{
 		this->arr[i] = 0;

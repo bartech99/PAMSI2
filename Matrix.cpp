@@ -36,7 +36,7 @@ void Matrix::Display()
 	PressAnyKey();
 }
 
-void Matrix::BF(bool WriteOn)
+void Matrix::BF()
 {
 }
 

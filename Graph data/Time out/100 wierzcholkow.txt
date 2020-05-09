@@ -1,0 +1,12 @@
+Gestosc 25%:
+	macierz: 0[ms]
+	lista: 0[ms]
+
+Gestosc 50%:
+	macierz: 0[ms]
+	lista: 0[ms]
+
+Gestosc 75%:
+	macierz: 0[ms]
+	lista: 0[ms]
+

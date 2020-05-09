@@ -20,6 +20,12 @@ double Test::End(int i)
 		return 0.0;
 }
 
+double Test::End()
+{
+	this->final = clock();
+	return (final - start) / (double)CLOCKS_PER_SEC;
+}
+
 double Test::Average()
 {
 	return this->average;

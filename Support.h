@@ -8,7 +8,7 @@
 using namespace std;
 
 const int MAX_V = 100;
-const int MAX_WEIGHT = 5;
+const int MAX_WEIGHT = 500;
 
 void Fill(int, int, Matrix*, List*);
 int Random(int, int);

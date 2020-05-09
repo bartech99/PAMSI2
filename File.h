@@ -28,7 +28,7 @@ public:
 	bool Read(List*, Matrix*);
 
 	void WriteTimes(int, double, double);
-	void WriteGraphs(Matrix*, List*);
+	void WriteGraphs(int*, double, double, int, int, int);
 
 	File();
 	~File();

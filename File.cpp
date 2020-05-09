@@ -134,8 +134,15 @@ void File::WriteTimes(int D, double Mavg, double Lavg)
 	this->file << "\tlista: " << Lavg << "[ms]" << endl << endl;
 }
 
-void File::WriteGraphs(Matrix* m, List* l)
+void File::WriteGraphs(int* data, double testM, double testL, int V, int E, int V0)
 {
+	this->file << "Ilosc wierzcholkow i krawedzi: " << V << ", " << E << endl;
+	this->file << "Wierzcholek startowy: " << V0 << endl;
+	this->file << "Czas wykonania dla macierzy: " << testM << "[ms]" << endl;
+	this->file << "Czas wykonania dla list: " << testL << "[ms]" << endl << endl;
+	this->file << "--- wierzcholek koncowy --- koszt drogi ---" << endl;
+	for (int i = 0; i < V; i++)
+		this->file << i + 1 << "\t" << data[i] << endl;
 }
 
 File::File()

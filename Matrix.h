@@ -12,7 +12,7 @@ public:
 
 	virtual bool Create(int, int, int);
 	virtual void Display();
-	virtual void BF(bool);
+	virtual void BF();
 
 	Matrix(int, int, int);
 	~Matrix();
