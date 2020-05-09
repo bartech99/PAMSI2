@@ -33,7 +33,6 @@ int main()
 		cout << "Generowanie grafow..." << endl;
 		file->Make();
 		delete file;
-
 		break;
 
 	case 2: //wagi i polaczenia losowe, gestosc i ilosc wierzcholkow wg tablicy
@@ -112,7 +111,7 @@ int main()
 				}
 
 				test->Begin();
-				m->BF();
+				//m->BF();
 				tM = test->End();
 
 				test->Begin();

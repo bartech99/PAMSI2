@@ -27,8 +27,6 @@ public:
 		this->E = e;
 		this->V0 = v0;
 		this->BFdata = new int [v];
-		for (int i = 0; i < v; i++)
-			this->BFdata[i] = INF;
 	}
 	~Basis() //destruktor
 	{

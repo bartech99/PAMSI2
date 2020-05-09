@@ -38,6 +38,29 @@ void Matrix::Display()
 
 void Matrix::BF()
 {
+	for (int i = 0; i < this->V; i++)
+		this->BFdata[i] = INF;
+	this->BFdata[this->V0 - 1] = 0;
+
+	for (int i = 0; i < this->V; i++)
+	{
+		for (int j = 0; j < this->V; j++)
+		{
+			if (this->BFdata[j] + this->arr[i][j] < this->BFdata[i] && i != j)
+				this->BFdata[i] = this->BFdata[j] + this->arr[i][j];
+		}
+	}
+	for (int i = 0; i < this->V; i++)
+	{
+		for (int j = 0; j < this->V; j++)
+		{
+			if (this->BFdata[j] + this->arr[i][j] < this->BFdata[j])
+			{
+				cout << "Graf zawiera cykl ujemny!" << endl;
+				return;
+			}
+		}
+	}
 }
 
 Matrix::Matrix(int v, int e, int v0)
