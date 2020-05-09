@@ -1,12 +1,12 @@
 Gestosc 25%:
 	macierz: 0[ms]
-	lista: 0[ms]
+	lista: 1.72[ms]
 
 Gestosc 50%:
 	macierz: 0[ms]
-	lista: 0[ms]
+	lista: 3.47[ms]
 
 Gestosc 75%:
-	macierz: 0[ms]
-	lista: 0[ms]
+	macierz: 0.01[ms]
+	lista: 8.23[ms]
 

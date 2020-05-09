@@ -37,7 +37,7 @@ void Matrix::Display()
 }
 
 void Matrix::BF()
-{
+{ /*
 	for (int i = 0; i < this->V; i++)
 		this->BFdata[i] = INF;
 	this->BFdata[this->V0 - 1] = 0;
@@ -46,7 +46,7 @@ void Matrix::BF()
 	{
 		for (int j = 0; j < this->V; j++)
 		{
-			if (this->BFdata[j] + this->arr[i][j] < this->BFdata[i] && i != j)
+			if (this->BFdata[j] + this->arr[i][j] < this->BFdata[i])
 				this->BFdata[i] = this->BFdata[j] + this->arr[i][j];
 		}
 	}
@@ -60,7 +60,7 @@ void Matrix::BF()
 				return;
 			}
 		}
-	}
+	}*/
 }
 
 Matrix::Matrix(int v, int e, int v0)

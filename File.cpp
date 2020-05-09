@@ -142,7 +142,7 @@ void File::WriteGraphs(int* data, double testM, double testL, int V, int E, int 
 	this->file << "Czas wykonania dla list: " << testL << "[ms]" << endl << endl;
 	this->file << "--- wierzcholek koncowy --- koszt drogi ---" << endl;
 	for (int i = 0; i < V; i++)
-		this->file << i + 1 << "\t" << data[i] << endl;
+		this->file << "\t\t" << i + 1 << "\t\t" << data[i] << endl;
 }
 
 File::File()
