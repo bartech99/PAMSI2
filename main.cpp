@@ -17,7 +17,7 @@ int main()
 	File* file = new File();
 	File* file2;
 
-	int Vs[5] = { 10, 30, 50, 100, 250 }; //tablica ilosci wierzcholkow
+	int Vs[5] = { 30, 50, 100, 200, 300 }; //tablica ilosci wierzcholkow
 	int Ds[4] = { 25, 50, 75, 100 }; //tablica gestosci
 	int V; //ilosc wierzcholkow
 	int E; //ilosc krawedzi

@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-const int INF = 1000;
+const int INF = 1000000;
 
 class Basis
 {
@@ -26,7 +26,7 @@ public:
 		this->V = v;
 		this->E = e;
 		this->V0 = v0;
-		this->BFdata = new int [v];
+		this->BFdata = new int[v];
 	}
 	~Basis() //destruktor
 	{

@@ -1,6 +1,7 @@
 #include "Matrix.h"
 #include "Support.h"
 #include <iostream>
+#include <Windows.h>
 using namespace std;
 
 bool Matrix::Create(int x, int y, int w)
@@ -37,30 +38,48 @@ void Matrix::Display()
 }
 
 void Matrix::BF()
-{ /*
+{
 	for (int i = 0; i < this->V; i++)
 		this->BFdata[i] = INF;
 	this->BFdata[this->V0 - 1] = 0;
+	int w;
 
-	for (int i = 0; i < this->V; i++)
+	for (int iV = 0; iV < this->V; iV++) 
 	{
-		for (int j = 0; j < this->V; j++)
+		for (int i = 0; i < this->V; i++) 
 		{
-			if (this->BFdata[j] + this->arr[i][j] < this->BFdata[i])
-				this->BFdata[i] = this->BFdata[j] + this->arr[i][j];
-		}
-	}
-	for (int i = 0; i < this->V; i++)
-	{
-		for (int j = 0; j < this->V; j++)
-		{
-			if (this->BFdata[j] + this->arr[i][j] < this->BFdata[j])
+			for (int j = 0; j < this->V; j++) 
 			{
-				cout << "Graf zawiera cykl ujemny!" << endl;
-				return;
+				w = this->arr[i][j];
+
+				if (this->BFdata[i] + w < this->BFdata[j]) 
+				{
+					this->BFdata[j] = this->BFdata[this->V0 - 1] + w;
+				}
 			}
 		}
-	}*/
+	}
+
+	for (int iV = 0; iV < this->V; iV++)
+	{
+		for (int i = 0; i < this->V; i++)
+		{
+			for (int j = 0; j < this->V; j++)
+			{
+				w = this->arr[i][j];
+
+				if (this->BFdata[i] + w < this->BFdata[j]) 
+				{
+					if (this->BFdata[i] > INF / 2) 
+						this->BFdata[i] = INF;
+					else if (w == INF) 
+						continue;
+					else this->BFdata[j] = -INF;
+				}
+				else if (this->BFdata[i] > INF / 2) this->BFdata[i] = INF;
+			}
+		}
+	}
 }
 
 Matrix::Matrix(int v, int e, int v0)

@@ -77,11 +77,10 @@ void List::Display()
 void List::BF()
 {
 	Graph* temp;
-
 	for (int i = 0; i < this->V; i++)
 		this->BFdata[i] = INF;
 	this->BFdata[this->V0 - 1] = 0;
-
+	
 	for (int i = 0; i < this->V; i++)
 	{
 		for (int j = 0; j < this->V; j++)

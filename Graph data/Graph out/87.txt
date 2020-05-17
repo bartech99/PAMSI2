@@ -1,14 +1,16 @@
-Ilosc wierzcholkow i krawedzi: 8, 28
-Wierzcholek startowy: 262
+Ilosc wierzcholkow i krawedzi: 10, 33
+Wierzcholek startowy: 5
 Czas wykonania dla macierzy: 0[ms]
 Czas wykonania dla list: 0[ms]
 
---- wierzcholek koncowy --- koszt drogi ---
-		1		-842150451
-		2		-842150451
-		3		-842150451
-		4		-842150451
-		5		-842150451
-		6		-842150451
-		7		-842150451
-		8		-842150451
+--- wierzcholek koncowy --- najmniejszy koszt drogi ---
+	1			61
+	2			99
+	3			116
+	4			107
+	5			0
+	6			204
+	7			172
+	8			174
+	9			209
+	10			91

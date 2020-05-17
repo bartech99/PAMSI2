@@ -74,7 +74,7 @@ void File::Make()
 
 		//tworzenie pliku
 		this->Open(I, 'g');
-		this->file << E << " " << V << " " << Random(1, MAX_WEIGHT) << endl;
+		this->file << E << " " << V << " " << Random(1, V) << endl;
 
 		//tworzenie polaczen
 		while (E--)
@@ -140,9 +140,9 @@ void File::WriteGraphs(int* data, double testM, double testL, int V, int E, int 
 	this->file << "Wierzcholek startowy: " << V0 << endl;
 	this->file << "Czas wykonania dla macierzy: " << testM << "[ms]" << endl;
 	this->file << "Czas wykonania dla list: " << testL << "[ms]" << endl << endl;
-	this->file << "--- wierzcholek koncowy --- koszt drogi ---" << endl;
+	this->file << "--- wierzcholek koncowy --- najmniejszy koszt drogi ---" << endl;
 	for (int i = 0; i < V; i++)
-		this->file << "\t\t" << i + 1 << "\t\t" << data[i] << endl;
+		this->file << "\t" << i + 1 << "\t\t\t" << data[i] << endl;
 }
 
 File::File()
